@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
+import CardCountry from './components/CardCountry'
 
 function App() {
 
@@ -28,16 +29,7 @@ function App() {
     <div className="App">
       {country ? (
         <>
-          <article className='cardCountry'>
-            <div className='cardCountry__img'>
-              <img src={country.flags.svg} alt="" />
-            </div>
-            <ul className='cardCountry__list'>
-              <li><b>Población: </b>{country.population}</li>
-              <li><b>Capital: </b>{country.capital}</li>
-              <li><b>Región: </b>{country.region}</li>
-            </ul>
-          </article>
+          <CardCountry country={country}/>
         </>
       ) : (
         <h1>Cargando...</h1>
