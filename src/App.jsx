@@ -5,18 +5,7 @@ import CardCountry from './components/CardCountry'
 
 function App() {
 
-  const [country, setCountry] = useState()
-
-  const getInfoCountry = () => {
-    const URL ="https://restcountries.com/v3.1/name/mexico" 
-    axios.get(URL)
-    .then((res) => setCountry(res.data[0]))
-    .catch((err) => console.log(err))
-  }
-
-  useEffect(() => {
-    getInfoCountry();
-  }, [])
+  
 
   //Ejercicio
   //Mostrar en pantalla la bandera de su país, la población, la capital, region
@@ -27,13 +16,10 @@ function App() {
 
   return (
     <div className="App">
-      {country ? (
-        <>
-          <CardCountry country={country}/>
-        </>
-      ) : (
-        <h1>Cargando...</h1>
-      )}
+      
+        
+          <CardCountry pais={"colombia"}/>
+      
     </div>
   );
 }
