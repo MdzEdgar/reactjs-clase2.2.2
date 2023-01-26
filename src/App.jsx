@@ -16,10 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      
-        
           <CardCountry pais={"colombia"}/>
-      
+          <CardCountry pais={"mexico"}/>
     </div>
   );
 }
