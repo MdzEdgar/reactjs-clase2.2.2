@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import CardCountry from './components/CardCountry'
+import CountryForm from './components/CountryForm';
 
 function App() {
 
@@ -16,8 +17,7 @@ function App() {
 
   return (
     <div className="App">
-          <CardCountry pais={"colombia"}/>
-          <CardCountry pais={"mexico"}/>
+          <CountryForm />
     </div>
   );
 }
